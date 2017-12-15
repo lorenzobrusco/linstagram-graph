@@ -31,8 +31,7 @@
     </header>
   </header>
 
-  <div class="container">
-
+  <div class="container" id="top">
     <section>
       <div class="row">
         <div class="col-md-2"></div>
@@ -41,8 +40,8 @@
           <div class='card'>
             <div class='top-section'>
               <a href=''>
-                  <img class="user-img" src='user_login_img.png'>
-                </a>
+                <img class="user-img" src='user_login_img.png'>
+              </a>
               <a href='' class='user-name'>Peppe</a>
             </div>
             <div class='body-section'>
@@ -105,8 +104,8 @@
           <div class='card'>
             <div class='top-section'>
               <a href=''>
-                  <img class="user-img" src='user_login_img.png'>
-                </a>
+                <img class="user-img" src='user_login_img.png'>
+              </a>
               <a href='' class='user-name'>Peppe</a>
             </div>
             <div class='body-section'>
@@ -163,33 +162,37 @@
 
     <div id="container-floating">
 
-      <div class="nd1 nds" data-toggle="tooltip" data-placement="left">
+      <div class="nd1 nds" data-toggle="tooltip" data-placement="left" data-original-title="Create a story">
         <i class="fa fa-clock-o center-icon" aria-hidden="true"></i>
       </div>
 
-
-      <div class="nd2 nds" data-toggle="tooltip" data-placement="left">
+      <div class="nd2 nds" data-toggle="tooltip" data-placement="left" data-original-title="Create a post ">
         <i class="fa fa-picture-o center-icon" aria-hidden="true"></i>
       </div>
 
-      <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create">
-        <p class="plus">+</p>
-      </div>
+      <div class="nd3 nds transparent" data-toggle="tooltip" data-placement="left" data-original-title="Top">
+       <a href="#top"><i class="fa fa-arrow-up black-icon" aria-hidden="true"></i></a>
+     </div>
 
+     <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create">
+      <p class="plus">+</p>
     </div>
-
 
   </div>
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p><small>&copy; <span><b>Linstagram</b></span>.<br>Project: Application Enterprise.<br>Designed by: Arcuri Brusco Cannella Drago Scarfone</small></p>
-        </div>
+
+
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p><small>&copy; <span><b>Linstagram</b></span>.<br>Project: Application Enterprise.<br>Designed by: Arcuri Brusco Cannella Drago Scarfone</small></p>
       </div>
     </div>
-  </footer>
-  <script type="text/javascript">
+  </div>
+</footer>
+<script type="text/javascript">
+  $(document).ready(function(){
     $('.show-all-comments').click(function(e) {
       var target = $(e.target).find('span');
       if (target.hasClass('show-comments')) {
@@ -198,7 +201,10 @@
         $(e.target).html('<span class="show-comments"></span> Carica altri commenti');
       }
     });
-  </script>
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
+</script>
+</script>
 </body>
 
 </html>

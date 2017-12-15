@@ -429,6 +429,43 @@ header {
   animation-fill-mode:  forwards;
 }
 
+.nd3{
+  background: #fff;
+  right: 68px;
+  bottom: 230px;
+  animation-delay: 0.2s;
+  animation: bounce-out-nds 0.3s linear;
+  animation-fill-mode:  forwards;
+}
+
+.transparent{
+  background: #fafafa !important;
+}
+.center-icon{
+  font-size: 1.2em;
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 40px;
+}
+
+.black-icon{
+  color: #9d9d9d !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 40px;
+}
+
 @keyframes bounce-nds{
     from {opacity: 0;}
     to {opacity: 1; transform: scale(1);}
@@ -443,17 +480,4 @@ header {
 
   animation: bounce-nds 0.1s linear;
   animation-fill-mode:  forwards;
-}
-
-.center-icon{
-  font-size: 1.2em;
-  color: white;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0;
-  top: 0;
-  bottom: 0;
-  text-align: center;
-  line-height: 40px;
 }
