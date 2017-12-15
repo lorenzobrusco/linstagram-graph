@@ -132,7 +132,7 @@ progress{
 }
 
 .overlay span {
-  background-image: url(https://goo.gl/NLUdLH);
+  background-image: url(icons.png);
   background-repeat: no-repeat;
   background-position: -2px -53px;
   height: 79px;
@@ -189,7 +189,7 @@ progress{
 }
 
 .react .love {
-  background-image: url(https://goo.gl/NLUdLH);
+  background-image: url(icons.png);
   background-position: -408px -156px;
   height: 24px;
   width: 24px;
@@ -197,7 +197,7 @@ progress{
 }
 
 .react .comment {
-  background-image: url(https://goo.gl/NLUdLH);
+  background-image: url(icons.png);
   background-position: -408px -26px;
   height: 24px;
   width: 24px;
@@ -205,7 +205,7 @@ progress{
 }
 
 .react .save {
-  background-image: url(https://goo.gl/NLUdLH);
+  background-image: url(icons.png);
   background-repeat: no-repeat;
   background-position: -104px -389px;
   height: 24px;
