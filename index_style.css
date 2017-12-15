@@ -250,14 +250,14 @@ footer {
   resize: none;
 }
 
-/*____________________________________________________________________________*/
+/* ####################### NAVBAR ######################### */
 
 nav {
   max-height: 50px;
   overflow: hidden;
   background-color: #fafafa;
   position: fixed;
-  padding:0px 120px;
+  padding: 0px 180px;
   /* Set the navbar to fixed position */
   top: 0;
   /* Position the navbar at the top of the page */
@@ -268,7 +268,6 @@ nav {
   border-bottom: 0.5px solid #ddd;
 }
 
-/* Links inside the navbar */
 
 nav a {
   float: left;
@@ -316,32 +315,51 @@ header {
 }
 
 #profile {
-  float: right;
-  position: relative;
   top: 5px;
-  background-image: url(https://goo.gl/NLUdLH);
-  background-repeat: no-repeat;
   background-position: -374px -346px;
-  height: 24px;
-  width: 24px;
-  transform: scale(0.9);
 }
 
 #notification {
-  float: right;
-  position: relative;
   top: 7px;
-  margin-right: 10px;
-  background-image: url(https://goo.gl/NLUdLH);
-  background-repeat: no-repeat;
   background-position: -401px 5px;
-  height: 24px;
-  width: 24px;
-  transform: scale(0.9);
 }
 
+#explore {
+  top: 7px;
+  background-position: -401px -205px;
+  /*  cursor: default;*/
+}
 
-#floating-button{
+.right-icon-nav {
+  background-image: url(https://goo.gl/NLUdLH);
+  background-repeat: no-repeat;
+  float: right;
+  position: relative;
+  margin: 0 10px 0 20px;
+  transform: scale(0.9);
+  height: 24px;
+  width: 24px;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+/*SEARCH FORM*/
+#search-form > div > input{
+    border-radius: 50px;
+    max-height: 25px;
+    position: relative;
+    top: 10px;
+}
+
+.col-nav{
+  width: 25%;
+}
+
+/* #################### FLOATING BUTTON ###########################*/
+
+#floating-button {
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -353,7 +371,7 @@ header {
   box-shadow: 0px 2px 5px #9d9d9dc7;
 }
 
-.plus{
+.plus {
   color: white;
   position: absolute;
   top: 0;
@@ -370,7 +388,7 @@ header {
   transition: all 0.3s;
 }
 
-#container-floating{
+#container-floating {
   position: fixed;
   width: 70px;
   height: 70px;
@@ -379,69 +397,78 @@ header {
   z-index: 50px;
 }
 
-#container-floating:hover{
+#container-floating:hover {
   height: 400px;
   width: 90px;
   padding: 30px;
 }
 
-#container-floating:hover .plus{
+#container-floating:hover .plus {
   animation: plus-in 0.15s linear;
   animation-fill-mode: forwards;
 }
 
-@keyframes plus-in{
-    from {transform: rotateZ(0deg);}
-    to {transform: rotateZ(135deg);}
+@keyframes plus-in {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(135deg);
+  }
 }
 
-@keyframes plus-out{
-    from {transform: rotateZ(135deg);}
-    to {transform: rotateZ(0deg);}
+@keyframes plus-out {
+  from {
+    transform: rotateZ(135deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
 }
 
-.nds{
+.nds {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   position: fixed;
   z-index: 300;
-  transform:  scale(0);
+  transform: scale(0);
   cursor: pointer;
-   box-shadow: 0px 2px 5px #9d9d9dc7;
+  box-shadow: 0px 2px 5px #9d9d9dc7;
 }
 
-.nd1{
+.nd1 {
   background: #ff6800;
   right: 68px;
   bottom: 110px;
   animation-delay: 0.2s;
   animation: bounce-out-nds 0.3s linear;
-  animation-fill-mode:  forwards;
+  animation-fill-mode: forwards;
 }
 
-.nd2{
+.nd2 {
   background: #FF9800;
   right: 68px;
   bottom: 170px;
   animation-delay: 0.2s;
   animation: bounce-out-nds 0.3s linear;
-  animation-fill-mode:  forwards;
+  animation-fill-mode: forwards;
 }
 
-.nd3{
+.nd3 {
   background: #fff;
   right: 68px;
   bottom: 230px;
   animation-delay: 0.2s;
   animation: bounce-out-nds 0.3s linear;
-  animation-fill-mode:  forwards;
+  animation-fill-mode: forwards;
 }
 
-.transparent{
+.transparent {
   background: #fafafa !important;
 }
-.center-icon{
+
+.center-icon {
   font-size: 1.2em;
   color: white;
   position: absolute;
@@ -454,7 +481,7 @@ header {
   line-height: 40px;
 }
 
-.black-icon{
+.black-icon {
   color: #9d9d9d !important;
   position: absolute;
   left: 0;
@@ -466,18 +493,30 @@ header {
   line-height: 40px;
 }
 
-@keyframes bounce-nds{
-    from {opacity: 0;}
-    to {opacity: 1; transform: scale(1);}
+@keyframes bounce-nds {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-@keyframes bounce-out-nds{
-    from {opacity: 1; transform: scale(1);}
-    to {opacity: 0; transform: scale(0);}
+@keyframes bounce-out-nds {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
 }
 
-#container-floating:hover .nds{
+#container-floating:hover .nds {
 
   animation: bounce-nds 0.1s linear;
-  animation-fill-mode:  forwards;
+  animation-fill-mode: forwards;
 }
+

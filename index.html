@@ -18,12 +18,23 @@
   <header>
     <header>
       <nav>
-        <span id="logo"></span>
+        <span class="col-nav">
+            <span id="logo"></span>
         <span id="logo-text">linstagram</span>
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="" id="profile"></a>
-        <a href="" id="notification"></a>
+        </span>
+        <span class="col-nav">
+          <span id="search-form" class="form-inline">
+            <div class="input-group">
+              <span class="input-group-btn"><i class="fa fa-search"></i></span>
+        <input type="text" class="form-control transparent" placeholder="Search">
+        </div>
+        </span>
+        </span>
+        <span class="col-nav">
+          <a href="" id="profile" class="right-icon-nav"></a>
+          <a href="" id="notification" class="right-icon-nav"></a>
+          <a href="" id="explore" class="right-icon-nav disabled" data-toggle="tooltip" data-placement="left" data-original-title="Coming Soon"></a>
+          </span>
       </nav>
       <div id="story-nav">
 
@@ -40,8 +51,8 @@
           <div class='card'>
             <div class='top-section'>
               <a href=''>
-                <img class="user-img" src='user_login_img.png'>
-              </a>
+                  <img class="user-img" src='user_login_img.png'>
+                </a>
               <a href='' class='user-name'>Peppe</a>
             </div>
             <div class='body-section'>
@@ -104,8 +115,8 @@
           <div class='card'>
             <div class='top-section'>
               <a href=''>
-                <img class="user-img" src='user_login_img.png'>
-              </a>
+                  <img class="user-img" src='user_login_img.png'>
+                </a>
               <a href='' class='user-name'>Peppe</a>
             </div>
             <div class='body-section'>
@@ -171,39 +182,40 @@
       </div>
 
       <div class="nd3 nds transparent" data-toggle="tooltip" data-placement="left" data-original-title="Top">
-       <a href="#top"><i class="fa fa-arrow-up black-icon" aria-hidden="true"></i></a>
-     </div>
+        <a href="#top"><i class="fa fa-arrow-up black-icon" aria-hidden="true"></i></a>
+      </div>
 
-     <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create">
-      <p class="plus">+</p>
+      <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create">
+        <p class="plus">+</p>
+      </div>
+
     </div>
 
+
   </div>
-
-
-</div>
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <p><small>&copy; <span><b>Linstagram</b></span>.<br>Project: Application Enterprise.<br>Designed by: Arcuri Brusco Cannella Drago Scarfone</small></p>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p><small>&copy; <span><b>Linstagram</b></span>.<br>Project: Application Enterprise.<br>Designed by: Arcuri Brusco Cannella Drago Scarfone</small></p>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('.show-all-comments').click(function(e) {
-      var target = $(e.target).find('span');
-      if (target.hasClass('show-comments')) {
-        $(e.target).html('<span class="hidden-comments"></span> Nascondi altri commenti');
-      } else {
-        $(e.target).html('<span class="show-comments"></span> Carica altri commenti');
-      }
+  </footer>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.show-all-comments').click(function(e) {
+        var target = $(e.target).find('span');
+        if (target.hasClass('show-comments')) {
+          $(e.target).html('<span class="hidden-comments"></span> Nascondi altri commenti');
+        } else {
+          $(e.target).html('<span class="show-comments"></span> Carica altri commenti');
+        }
+      });
+      $('[data-toggle="tooltip"]').tooltip();
     });
-    $('[data-toggle="tooltip"]').tooltip();   
-  });
-</script>
+
+  </script>
 </body>
 
 </html>
