@@ -4,6 +4,11 @@
   font-weight: normal;
   src: local('font/Billabong'), url('font/Billabong.woff') format('woff');
 }
+
+.transparent {
+  background: #fafafa !important;
+}
+
 nav {
   display: flex;
   max-height: 50px;
