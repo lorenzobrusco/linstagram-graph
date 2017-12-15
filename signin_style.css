@@ -57,7 +57,7 @@ a {
   width: 100%;
   margin: 5px auto 10px auto;
   max-width: 480px;
-  min-height: 585px;
+  min-height: 565px;
   position: relative;
   box-shadow: 0 0 15px 5px rgba(122, 122, 122, .50);
 }
@@ -337,17 +337,22 @@ body {
   width: 42px;
   padding: 5px;
   transform: scale(1.1);
-  align-self: center;
+/*  align-self: center;*/
 }
 
 #logo-text {
+  padding-left: 15px;
+    padding-bottom: 14px;
+    position: relative;
+    top: -10px;
+    margin-bottom: 0px;
+  
   font-family: 'Billabong', sans-serif;
-  padding: 28px 0 5px 15px;
   font-size: 4em;
   background: linear-gradient(to left bottom, #4c68d7, #8a3ab9, #cd486b, #fb8750, #FF9800);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  align-self: center;
+/*  align-self: center;*/
 }
 
 .row {
