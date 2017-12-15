@@ -4,6 +4,15 @@
   font-weight: normal;
   src: local('font/Billabong'), url('font/Billabong.woff') format('woff');
 }
+
+body,
+html {
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+
+}
+
 nav {
   display: flex;
   max-height: 50px;
@@ -16,7 +25,7 @@ nav {
   /* Position the navbar at the top of the page */
   width: 100%;
   /* Full width */
-  z-index: 9999;
+  z-index: 999;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, .1);
   border-bottom: 0.5px solid #ddd;
 }
@@ -126,4 +135,28 @@ header {
 
 .disabled {
   opacity: 0.5;
+}
+
+
+
+#rainbow-progress-bar {
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 900% 900%;
+
+  animation: rainbow 9s ease infinite;
+}
+
+@keyframes rainbow { 
+  0% { background-position: 0% 100%; }
+  50% { background-position: 100% 200%; }
+  100% {background-position: 0% 100%; }
 }

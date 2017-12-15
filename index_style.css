@@ -49,6 +49,9 @@ footer {
   margin-bottom: 60px;
 }
 
+progress{
+  width: 100%;
+}
 
 .card {
   background-color: #fff;
@@ -417,4 +420,3 @@ footer {
   animation: bounce-nds 0.1s linear;
   animation-fill-mode: forwards;
 }
-
