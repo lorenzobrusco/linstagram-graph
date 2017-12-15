@@ -12,14 +12,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="navbar.css">
   </head>
 
   <body>
       <header>
         <nav>
          <span class="nav-left">
+         <a href="index.html">
           <span id="logo"></span>
           <span id="logo-text">linstagram</span>
+          </a>
         </span>
           <span id="search-form" class="form-inline">
             <div class="input-group" id="search-div">
@@ -28,9 +31,9 @@
             </div>
           </span>
           <span class="nav-right">
-            <a href="" id="profile" class="right-icon-nav"></a>
-            <a href="" id="notification" class="right-icon-nav"></a>
             <a href="" id="explore" class="right-icon-nav disabled" data-toggle="tooltip" data-placement="left" data-original-title="Coming Soon"></a>
+            <a href="" id="notification" class="right-icon-nav"></a>
+            <a href="profile.html" id="profile" class="right-icon-nav"></a>
           </span>
         </nav>
         <div id="story-nav">
@@ -208,6 +211,14 @@
             $(e.target).html('<span class="show-comments"></span> Carica altri commenti');
           }
         });
+        $('#search-input').focusin(function(){
+          $("#search-div").css("width","70%");
+        });
+        
+        $('#search-input').focusout(function(){
+          $("#search-div").css("width","50%");
+        });
+        
         $('[data-toggle="tooltip"]').tooltip();
       });
 
