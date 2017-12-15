@@ -317,7 +317,8 @@ button:focus {
 
 #container,
 body {
-  background: linear-gradient(-45deg, var(--primary-color) 0%, var(--third-color) 100%);
+/*  background: linear-gradient(-45deg, var(--primary-color) 0%, var(--third-color) 100%);*/
+  background-color: #fafafa; 
 }
 
 #logo-container {
