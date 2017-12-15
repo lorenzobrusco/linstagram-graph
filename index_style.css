@@ -1,4 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@font-face {
+  font-family: 'Billabong';
+  font-style: normal;
+  font-weight: normal;
+  src: local('font/Billabong'), url('font/Billabong.woff') format('woff');
+}
 
 body,
 html {
@@ -253,6 +259,7 @@ footer {
 /* ####################### NAVBAR ######################### */
 
 nav {
+  display: flex;
   max-height: 50px;
   overflow: hidden;
   background-color: #fafafa;
@@ -268,9 +275,42 @@ nav {
   border-bottom: 0.5px solid #ddd;
 }
 
+.nav-left{
+   flex-grow: 1;
+}
+
+.nav-right{
+   flex-grow: 1;
+/*  margin-left: auto;*/
+}
+
+/*SEARCH FORM*/
+#search-form{
+  flex-grow: 4;
+  display: flex;
+  justify-content: center;
+/*  flex: 4;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search-div{
+  width: 50%;
+}
+
+#search-input:focus {
+   width: 80%;
+}
+
+#search-form > div > input{
+  border-radius: 50px;
+  max-height: 25px;
+  position: relative;
+  top: 10px;
+}
 
 nav a {
-  float: left;
+  /*  float: left;*/
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -280,13 +320,6 @@ nav a {
 
 header {
   margin-bottom: 50px;
-}
-
-@font-face {
-  font-family: 'Billabong';
-  font-style: normal;
-  font-weight: normal;
-  src: local('font/Billabong'), url('font/Billabong.woff') format('woff');
 }
 
 #logo-text {
@@ -300,6 +333,7 @@ header {
   background: linear-gradient(to left bottom, #4c68d7, #8a3ab9, #cd486b, #fb8750, #FF9800);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
 }
 
 #logo {
@@ -312,6 +346,7 @@ header {
   height: 60px;
   width: 42px;
   transform: scale(0.65);
+
 }
 
 #profile {
@@ -333,29 +368,19 @@ header {
 .right-icon-nav {
   background-image: url(https://goo.gl/NLUdLH);
   background-repeat: no-repeat;
-  float: right;
+/*  float: right;*/
   position: relative;
   margin: 0 10px 0 20px;
   transform: scale(0.9);
   height: 24px;
   width: 24px;
+
 }
 
 .disabled {
   opacity: 0.5;
 }
 
-/*SEARCH FORM*/
-#search-form > div > input{
-    border-radius: 50px;
-    max-height: 25px;
-    position: relative;
-    top: 10px;
-}
-
-.col-nav{
-  width: 25%;
-}
 
 /* #################### FLOATING BUTTON ###########################*/
 
