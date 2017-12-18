@@ -20,6 +20,14 @@
   <link rel="stylesheet" href="stories.css">
   <link rel="stylesheet" href="dropzone.css">
 
+  <script src="animatedModal.min.js"></script>
+  <script src="dropzone.js"></script>
+
+  <script>
+    Dropzone.autoDiscover = false;
+  </script>
+
+
 
   <link rel="stylesheet" href="animate.min.css">
 </head>
@@ -278,22 +286,22 @@
       <div id="modal-card">
         <div class="modal-header">
           <span class="modal-title">Create Post</span>
-          <div class="close-create-post-modal">
-          </div>
+          <div class="close-create-post-modal"></div>
         </div>
         <div class="modal-body">
-          <form action="/file-upload" class="dropzone" id="post-dropzone">
+          <form class="dropzone" id="post-dropzone">
+            <!-- this is were the previews should be shown. -->
             <div class="fallback">
               <input name="file" type="file" multiple />
             </div>
+            <br> <label for="post-description-input">Enter a
+              description:</label>
+            <textarea class="form-control" rows="5" id="post-description-input"> 
+              </textarea>
+            <button type="submit" class="btn btn-success btn-create">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i> Create Post
+              </button>
           </form>
-          <br>
-          <lable for="post-description-input">Description:</lable>
-          <textarea class="form-control" rows="5" id="post-description-input"> 
-            </textarea>
-
-          <button class="btn btn-success btn-create"><i class="fa fa-paper-plane" aria-hidden="true"></i> Create Post</button>
-
         </div>
       </div>
     </div>
@@ -311,43 +319,9 @@
     </div>
   </footer>
   <script src="progressBar.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      //show comment event
-      $('.show-all-comments').click(function(e) {
-        var target = $(e.target).find('span');
-        if (target.hasClass('show-comments')) {
-          $(e.target).html('<span class="hidden-comments"></span> Nascondi altri commenti');
-        } else {
-          $(e.target).html('<span class="show-comments"></span> Carica altri commenti');
-        }
-      });
-
-      //Active tooltip
-      $('[data-toggle="tooltip"]').tooltip();
-      $("#open-create-post-modal").animatedModal({
-        modalTarget: 'create-post-modal',
-        animatedIn: 'lightSpeedIn',
-        animatedOut: 'bounceOutDown',
-        color: '#fafafa80',
-        // Callbacks
-        beforeOpen: function() {},
-        afterOpen: function() {},
-        beforeClose: function() {},
-        afterClose: function() {
-          $("#post-description-input").val("");
-          var myDropzone = Dropzone.forElement("#post-dropzone");
-          myDropzone.removeAllFiles(true);
-        }
-      });
-
-    });
-
-  </script>
+  <script src="index.js"></script>
   <script src="stories.js"></script>
   <script src="create_stories.js"></script>
-  <script src="animatedModal.min.js"></script>
-  <script src="dropzone.js"></script>
 </body>
 
 </html>
