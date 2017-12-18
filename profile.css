@@ -261,9 +261,6 @@ footer{
 	padding-left: 0 ! important;
 }
 
-.content-modify-profile .custom-nav{
-
-}
 
 .content-modify-profile .custom-nav .active-nav{
 	border-left: 2px solid black; 
@@ -279,29 +276,34 @@ footer{
 
 .content-modify-profile .modify-profile{
 	padding: 16px;
+	padding-bottom: 32px; 
 	border-left: 0.5px solid #ddd; 
 }
 
 .content-modify-profile .modify-profile .form-inline-profile{
 	margin-bottom: 16px;
-	-webkit-box-pack: start;
-	-webkit-justify-content: flex-start;
-	-ms-flex-pack: start;
-	justify-content: flex-start;
-}
-
-.content-modify-profile aside{
-	margin-top: 6px;
-	-webkit-flex: 0 0 194px;
-	-ms-flex: 0 0 194px;
-	flex: 0 0 194px;
-}
-
-.content-modify-profile aside label{
-	float: left;
 }
 
 .content-modify-profile .modify-profile .input-inline{
 	float: right;
 	width: 70%;
 }
+
+.content-modify-profile .modify-profile label{
+	line-height: 32px;
+}
+
+.content-modify-profile .modify-profile .input-inline #bio{
+    height: 60px;
+    padding: 6px 10px;
+    resize: vertical;
+}
+
+
+
+.content-modify-profile .modify-profile .input-inline #selection{
+	width: 40%;
+}
+
+/*compleanno*/
+/*privato*/
