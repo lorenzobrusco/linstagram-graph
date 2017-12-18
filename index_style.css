@@ -48,14 +48,15 @@ footer {
   margin-bottom: 60px;
 }
 
-progress{
+progress {
   width: 100%;
 }
 
 
-.hidden-posts{
+.hidden-posts {
   display: none;
 }
+
 .card {
   background-color: #fff;
   border: 0.5px solid #ddd;
@@ -78,7 +79,7 @@ progress{
 .top-section .user-img {
   bottom: 6px;
   position: relative;
-  background: rgba(0,0,0,.25);
+  background: rgba(0, 0, 0, .25);
   padding: 1px;
   width: 40px;
   height: 40px;
@@ -430,44 +431,135 @@ progress{
 }
 
 /* #################### STORIES SECTION ###########################*/
-#stories {padding: 12px; margin-top: 16px;}
 
-h1 {text-align: center;font-family: monospace;padding:0 12px;border-bottom:1px solid #ddd;font-size:24px;height:56px;line-height:56px;margin-bottom: 0;white-space: nowrap;text-overflow: ellipsis;overflow:hidden;}
-h1.Snapgram {background: #fff;color:#333;}
-h1.FaceSnap {background: #3B5998;color: #fff;}
-h1.VemDeZAP {background: #085E53;color: #fff;}
-h1.Snapssenger {background: #0084FF;color:#fff;}
+#stories {
+  padding: 12px;
+  margin-top: 16px;
+}
 
-.disclaimer {display:block;text-decoration: none !important;color:#333;line-height: 1.5em;background: #ffffd2;border-radius:3px;margin: 12px 12px 0;padding:12px 12px 12px 74px;font-size:13px;max-width: 500px;overflow: hidden;min-height: 50px;}
-.disclaimer img {float:left;margin-right: 12px;width:50px;position: absolute;margin-left:-62px;}
-.disclaimer a {color: inherit !important;border:0;}
-.disclaimer p {margin: 0;}
-.disclaimer p + p {margin-top: 1.25em}
+h1 {
+  text-align: center;
+  font-family: monospace;
+  padding: 0 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 24px;
+  height: 56px;
+  line-height: 56px;
+  margin-bottom: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
-.skin {text-transform: uppercase;white-space: nowrap;overflow: hidden;font-weight: bold;position: absolute;z-index: 10;left:0;right:0;bottom: 0;background: #fff;font-size:16px;padding:12px;color:#fff;background:#333;}
-.skin select {background: #fff; font-size:inherit;text-transform: none; max-width: 30%;}
+h1.Snapgram {
+  background: #fff;
+  color: #333;
+}
 
-#stories {margin-top:60px;text-align: center;margin:0 auto;}
+h1.FaceSnap {
+  background: #3B5998;
+  color: #fff;
+}
 
+h1.VemDeZAP {
+  background: #085E53;
+  color: #fff;
+}
 
+h1.Snapssenger {
+  background: #0084FF;
+  color: #fff;
+}
 
-@media (min-width: 524px){
-  .disclaimer {margin: 12px auto;}
+.disclaimer {
+  display: block;
+  text-decoration: none !important;
+  color: #333;
+  line-height: 1.5em;
+  background: #ffffd2;
+  border-radius: 3px;
+  margin: 12px 12px 0;
+  padding: 12px 12px 12px 74px;
+  font-size: 13px;
+  max-width: 500px;
+  overflow: hidden;
+  min-height: 50px;
+}
+
+.disclaimer img {
+  float: left;
+  margin-right: 12px;
+  width: 50px;
+  position: absolute;
+  margin-left: -62px;
+}
+
+.disclaimer a {
+  color: inherit !important;
+  border: 0;
+}
+
+.disclaimer p {
+  margin: 0;
+}
+
+.disclaimer p + p {
+  margin-top: 1.25em
+}
+
+.skin {
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  font-size: 16px;
+  padding: 12px;
+  color: #fff;
+  background: #333;
+}
+
+.skin select {
+  background: #fff;
+  font-size: inherit;
+  text-transform: none;
+  max-width: 30%;
+}
+
+#stories {
+  margin-top: 60px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 
+@media (max-width: 524px) {
+  .container {
+    width: 100% !important;
+  }
+  .disclaimer {
+    margin: 12px auto;
+  }
+}
+
 /*############# POPOVER ##################*/
+
 --primary-color: #89ABE3;
 --third-color: #F2DDDE;
 
-.popover-title{
+.popover-title {
   background: linear-gradient(135deg, #89ABE3 0%, #F2DDDE 80%) !important;
 }
 
-.popover-title .user-img{
+.popover-title .user-img {
   /*  bottom: 6px;*/
   /*  position: relative;*/
-  background: rgba(0,0,0,.25);
+  background: rgba(0, 0, 0, .25);
   padding: 1px;
   width: 30px;
   height: 30px;
@@ -477,29 +569,27 @@ h1.Snapssenger {background: #0084FF;color:#fff;}
   align-self: center;
 }
 
-#username-popover{
+#username-popover {
   margin-left: 5px;
   font-size: 1.1em;
 }
 
-.popover-option{
+.popover-option {
   padding: 4px;
-  display:inline !important;
+  display: inline !important;
 }
 
-.popover-option i{
+.popover-option i {
   margin-right: 4px;
   width: 15px;
 }
 
-.popover-option:hover{
-  display:inline;
+.popover-option:hover {
+  display: inline;
 }
 
-#profile-option-popover{
+#profile-option-popover {}
 
-}
-
-#logout-option-popover{
+#logout-option-popover {
   color: red;
 }

@@ -160,21 +160,8 @@ var createStories = function(){
             document.getElementById("posts").classList.add("hidden-posts");
             callback();
         },
-
-        'onView': function(storyId) { // on view story
-          callback();
-        },
-
-        'onEnd': function(storyId, callback) { // on end story
-            callback();
-        },
-
         'onClose': function(storyId, callback) { // on close story viewer
             document.getElementById("posts").classList.remove("hidden-posts");
-            callback();
-        },
-
-        'onNavigateItem': function(storyId, nextStoryId, callback) { // on navigate item of story
             callback();
         },
       }

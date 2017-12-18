@@ -114,7 +114,7 @@
 #zuck-modal-content .story-viewer .head .left > div > *{width:100%;display:inline-block;line-height:21px;}
 #zuck-modal-content .story-viewer .head .left > div > strong {font-weight: 500;}
 #zuck-modal-content .story-viewer .head .right{float:right; margin-right: 32px;}
-#zuck-modal-content .story-viewer .head .right .close, #zuck-modal-content .story-viewer .head .back {font-size:42px;width:48px;cursor: pointer;text-align:center;}
+#zuck-modal-content .story-viewer .head .right .close, #zuck-modal-content .story-viewer .head .back {color: white;font-size:42px;width:48px;cursor: pointer;text-align:center;}
 #zuck-modal-content .story-viewer .head .left > .back {display: none; width:24px; margin:-6px -6px 0 -6px}
 #zuck-modal-content .story-viewer .head .right .time {display:none;}
 #zuck-modal-content .story-viewer .head .loading {display:none;border-radius:50%;width:30px;height:30px;border:4px solid rgba(255,255,255,0.2);box-sizing: border-box;border-top-color:#FFF;-webkit-animation:zuckLoading 1s infinite linear;animation:zuckLoading 1s infinite linear;}
@@ -130,6 +130,9 @@
 
 
 @media (max-width: 1024px) {
+
+	.stories.carousel .story { max-width: 120px; margin: 0 20px;}
+	.stories.snapgram .story > a > .img {max-height: 120px;}
 	#zuck-modal-content .story-viewer .head{top:3px;}
 	#zuck-modal-content .story-viewer .head .loading {width: 24px;height: 24px;margin: 6px 0;}
 	#zuck-modal-content .story-viewer .head .img{width:30px;height:30px;margin-right:12px;}
