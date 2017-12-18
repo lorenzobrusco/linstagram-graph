@@ -52,23 +52,10 @@ progress{
   width: 100%;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 10px;
-    margin: 0 5px; 
+.hidden-posts{
+  display: none;
 }
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-      background: #848484a3;
-      border-radius: 10px;
-}
-
 .card {
   background-color: #fff;
   border: 0.5px solid #ddd;
@@ -224,17 +211,17 @@ progress{
 
 .react .love {
   background-image: url(icons.png);
-  background-position: -408px -156px;
+  background-position: -407px -156px;
   height: 24px;
-  width: 24px;
+  width: 27px;
   display: inline-block;
 }
 
 .react .comment {
   background-image: url(icons.png);
-  background-position: -408px -26px;
+  background-position: -407px -26px;
   height: 24px;
-  width: 24px;
+  width: 27px;
   display: inline-block;
 }
 
@@ -456,7 +443,7 @@ progress{
 }
 
 /* #################### STORIES SECTION ###########################*/
-#stories {padding: 12px;}
+#stories {padding: 12px; margin-top: 16px;}
 
 h1 {text-align: center;font-family: monospace;padding:0 12px;border-bottom:1px solid #ddd;font-size:24px;height:56px;line-height:56px;margin-bottom: 0;white-space: nowrap;text-overflow: ellipsis;overflow:hidden;}
 h1.Snapgram {background: #fff;color:#333;}
