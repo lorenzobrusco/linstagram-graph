@@ -23,8 +23,9 @@
 
 .popover-option {
   padding: 4px;
-  font-size: 1.2em ;
-  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: bold;
   display: inline !important;
 }
 
