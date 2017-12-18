@@ -246,3 +246,62 @@ footer{
 	padding-right: 10px !important; 
 	padding-left: 10px !important; 
 }
+
+.content-modify-profile {
+	margin-top: 64px;
+	background-color: #fff;
+	border: 0.5px solid #ddd;
+	border-radius: 3px;
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.content-modify-profile .sidenav{
+	margin-left: 0 ! important;
+	padding-left: 0 ! important;
+}
+
+.content-modify-profile .custom-nav{
+
+}
+
+.content-modify-profile .custom-nav .active-nav{
+	border-left: 2px solid black; 
+}
+
+.content-modify-profile .custom-nav .active-nav:hover{
+	border-left: 2px solid black; 
+}
+
+.content-modify-profile .custom-nav li:hover{
+	border-left: 2px solid #ccc; 
+}
+
+.content-modify-profile .modify-profile{
+	padding: 16px;
+	border-left: 0.5px solid #ddd; 
+}
+
+.content-modify-profile .modify-profile .form-inline-profile{
+	margin-bottom: 16px;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+}
+
+.content-modify-profile aside{
+	margin-top: 6px;
+	-webkit-flex: 0 0 194px;
+	-ms-flex: 0 0 194px;
+	flex: 0 0 194px;
+}
+
+.content-modify-profile aside label{
+	float: left;
+}
+
+.content-modify-profile .modify-profile .input-inline{
+	float: right;
+	width: 70%;
+}
