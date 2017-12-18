@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width,inital-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- jQuery library -->
@@ -18,6 +18,10 @@
   <link rel="stylesheet" href="navbar_style.css">
   <link rel="stylesheet" href="popover_style.css">
   <link rel="stylesheet" href="stories.css">
+  <link rel="stylesheet" href="dropzone.css">
+
+
+  <link rel="stylesheet" href="animate.min.css">
 </head>
 
 <body>
@@ -254,7 +258,9 @@
       </div>
 
       <div class="nd2 nds" data-toggle="tooltip" data-placement="left" data-original-title="Post ">
-        <i class="fa fa-picture-o center-icon" aria-hidden="true"></i>
+        <a id="open-create-post-modal" href="#create-post-modal">
+            <i class="fa fa-picture-o center-icon" aria-hidden="true"></i>
+          </a>
       </div>
 
       <div class="nd3 nds transparent" data-toggle="tooltip" data-placement="left" data-original-title="Top">
@@ -265,6 +271,33 @@
         <p class="plus">+</p>
       </div>
     </div>
+
+    <!--CREATE POST MODAL-->
+    <div id="create-post-modal">
+      <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+      <div id="modal-card">
+        <div class="modal-header">
+          <span class="modal-title">Create Post</span>
+          <div class="close-create-post-modal">
+          </div>
+        </div>
+        <div class="modal-body">
+          <form action="/file-upload" class="dropzone" id="post-dropzone">
+            <div class="fallback">
+              <input name="file" type="file" multiple />
+            </div>
+          </form>
+          <br>
+          <lable for="post-description-input">Description:</lable>
+          <textarea class="form-control" rows="5" id="post-description-input"> 
+            </textarea>
+
+          <button class="btn btn-success btn-create"><i class="fa fa-paper-plane" aria-hidden="true"></i> Create Post</button>
+
+        </div>
+      </div>
+    </div>
+
 
 
   </div>
@@ -292,12 +325,29 @@
 
       //Active tooltip
       $('[data-toggle="tooltip"]').tooltip();
+      $("#open-create-post-modal").animatedModal({
+        modalTarget: 'create-post-modal',
+        animatedIn: 'lightSpeedIn',
+        animatedOut: 'bounceOutDown',
+        color: '#fafafa80',
+        // Callbacks
+        beforeOpen: function() {},
+        afterOpen: function() {},
+        beforeClose: function() {},
+        afterClose: function() {
+          $("#post-description-input").val("");
+          var myDropzone = Dropzone.forElement("#post-dropzone");
+          myDropzone.removeAllFiles(true);
+        }
+      });
 
     });
 
   </script>
   <script src="stories.js"></script>
   <script src="create_stories.js"></script>
+  <script src="animatedModal.min.js"></script>
+  <script src="dropzone.js"></script>
 </body>
 
 </html>
