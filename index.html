@@ -4,11 +4,11 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/bootstrap.min.css">
   <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="lib/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="lib/bootstrap.min.js"></script>
   <script src="navbar.js"></script>
   <script src="popover.js"></script>
 
@@ -19,15 +19,10 @@
   <link rel="stylesheet" href="popover_style.css">
   <link rel="stylesheet" href="stories.css">
   <link rel="stylesheet" href="dropzone.css">
+  <link rel="stylesheet" href="create_post_modal.css">
 
   <script src="animatedModal.min.js"></script>
   <script src="dropzone.js"></script>
-
-  <script>
-    Dropzone.autoDiscover = false;
-  </script>
-
-
 
   <link rel="stylesheet" href="animate.min.css">
 </head>
@@ -291,22 +286,26 @@
         <div class="modal-body">
           <form class="dropzone" id="post-dropzone">
             <!-- this is were the previews should be shown. -->
+            <button type="submit" class="btn btn-success btn-create">
+              <i class="fa fa-paper-plane" aria-hidden="true"></i> Confirm
+            </button>
             <div class="fallback">
               <input name="file" type="file" multiple />
             </div>
-            <br> <label for="post-description-input">Enter a
-              description:</label>
+            <div class="dropzone-previews">
+              <div class=""><span>Drop yuor photos or videos here</span></div>
+            </div>
+          </form>
+          <form id="post-description" class="hide">
+            <label for="post-description-input">Enter a description:</label>
             <textarea class="form-control" rows="5" id="post-description-input"> 
               </textarea>
-            <button type="submit" class="btn btn-success btn-create">
-                <i class="fa fa-paper-plane" aria-hidden="true"></i> Create Post
-              </button>
           </form>
+
+
         </div>
       </div>
     </div>
-
-
 
   </div>
   <footer>
@@ -318,10 +317,11 @@
       </div>
     </div>
   </footer>
-  <script src="progressBar.js"></script>
-  <script src="index.js"></script>
-  <script src="stories.js"></script>
-  <script src="create_stories.js"></script>
+
 </body>
+<script src="progressBar.js"></script>
+<script src="index.js"></script>
+<script src="stories.js"></script>
+<script src="create_stories.js"></script>
 
 </html>
