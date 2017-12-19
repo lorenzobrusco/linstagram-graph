@@ -5,14 +5,14 @@ $(document).ready(
     //show comment event
     $('.show-all-comments')
       .click(
-      function (e) {
-        var target = $(e.target).find('span');
-        if (target.hasClass('show-comments')) {
-          $(e.target).html('<span class="hidden-comments"></span> Nascondi altri commenti');
-        } else {
-          $(e.target).html('<span class="show-comments"></span> Carica altri commenti');
-        }
-      });
+        function (e) {
+          var target = $(e.target).find('span');
+          if (target.hasClass('show-comments')) {
+            $(e.target).html('<span class="hidden-comments"></span> Nascondi altri commenti');
+          } else {
+            $(e.target).html('<span class="show-comments"></span> Carica altri commenti');
+          }
+        });
 
     //Active tooltip
     $('[data-toggle="tooltip"]').tooltip();
@@ -29,34 +29,34 @@ $(document).ready(
       addRemoveLinks: true,
       dictDefaultMessage: 'Drop yuor photos or videos here',
       //     Tweek dropzone to use another container for file previews
-      previewsContainer:".dropzone-previews",
+      previewsContainer: ".dropzone-previews",
       init: function () {
         var myDropzone = this;
 
         var submit_button = $('.btn-create');
         submit_button.prop("disabled", true);
         this.on("thumbnail", function (file) {
-          if (myDropzone.getAcceptedFiles().length > 0){
+          if (myDropzone.getAcceptedFiles().length > 0) {
+            console.log($("div.dz-default.dz-message"));
+            $("div.dz-default.dz-message").addClass("hide");
             submit_button.prop("disabled", false);
           }
         });
 
         this.on("removedfile", function (file) {
           console.log(myDropzone.getAcceptedFiles());
-          if (myDropzone.getAcceptedFiles().length == 0){
+          if (myDropzone.getAcceptedFiles().length == 0) {
+            $("div.dz-default.dz-message").removeClass("hide");
             submit_button.prop("disabled", true);
           }
         });
 
         // First change the button to actually tell Dropzone to process the queue.
-        this.element
-          .querySelector("button[type=submit]")
-          .addEventListener("click", function (e) {
+        this.element.querySelector("button[type=submit]").addEventListener("click", function (e) {
           // Make sure that the form isn't actually being sent.
           e.preventDefault();
           e.stopPropagation();
-          myDropzone
-            .processQueue();
+          myDropzone.processQueue();
 
           // Remove rejected files
           var rejected_files = myDropzone.getRejectedFiles();
@@ -73,7 +73,7 @@ $(document).ready(
           // Hide the success button or the complete form.
         });
         this.on("successmultiple", function (files,
-                                              response) {
+          response) {
           $("#post-dropzone").addClass("hide");
           $("#post-description").removeClass("hide");
           //        	$('#close-post-modal').click();
@@ -81,7 +81,7 @@ $(document).ready(
           // Redirect user or notify of success.
         });
         this.on("errormultiple", function (files,
-                                            response) {
+          response) {
           // Gets triggered when there was an error sending the files.
           // Maybe show form again, and notify user of error
         });
@@ -89,26 +89,28 @@ $(document).ready(
     }; //close option
 
     var uploader = document
-    .querySelector('#post-dropzone');
+      .querySelector('#post-dropzone');
     //CREATE DROPZONE
     var myDropzone = new Dropzone(uploader,
-                                  dropzoneOptions);
+      dropzoneOptions);
 
     //Active modal
-    $("#open-create-post-modal").animatedModal({
-      modalTarget: 'create-post-modal',
-      animatedIn: 'lightSpeedIn',
-      animatedOut: 'bounceOutDown',
-      color: '#fafafa80',
-      // Callbacks
-      beforeOpen: function () {},
-      afterOpen: function () {},
-      beforeClose: function () {},
-      afterClose: function () {
-        $("#post-description-input").val("");
-        //clean dropzone uploads
-        myDropzone.removeAllFiles(true);
+    var modalConfiguration={
+        modalTarget: 'create-post-modal',
+        animatedIn: 'lightSpeedIn',
+        animatedOut: 'bounceOutDown',
+        color: '#fafafa80',
+        // Callbacks
+        beforeOpen: function () {},
+        afterOpen: function () {},
+        beforeClose: function () {},
+        afterClose: function () {
+          $("#post-description-input").val("");
+          //clean dropzone uploads
+          myDropzone.removeAllFiles(true);
+        }
       }
-    });
+    $("#open-create-post-modal").animatedModal(modalConfiguration);
+    $("#add-mobile").animatedModal(modalConfiguration);
 
   });

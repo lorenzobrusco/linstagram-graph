@@ -538,7 +538,7 @@ h1.Snapssenger {
 }
 
 
-@media (max-width: 524px) {
+@media (max-width: 800px) {
   .container {
     width: 100% !important;
   }
@@ -557,6 +557,3 @@ h1.Snapssenger {
   }
 
 }
-
-
-/*######################## MODAL ####################*/

@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="popover_style.css">
   <link rel="stylesheet" href="stories.css">
   <link rel="stylesheet" href="dropzone.css">
-  <link rel="stylesheet" href="create_post_modal.css">
+  <link rel="stylesheet" href="create_post_modal_style.css">
 
   <script src="animatedModal.min.js"></script>
   <script src="dropzone.js"></script>
@@ -30,6 +30,7 @@
 <body>
   <header>
     <div id="rainbow-progress-bar"></div>
+    
     <div id="navbar-mobile">
       <div class="search-bar">
         <input type="text" class="form-control transparent" placeholder="Search" id="search-input">
@@ -38,9 +39,8 @@
         <ul id="horizontal-list">
           <li><a href="index.html" id="home-mobile"></a></li>
           <li><a href="profile.html" role="button" id="profile-mobile"></a></li>
-          <li><a href="" id="add-mobile" ><span /></a></li>
+          <li><a href="#create-post-modal" id="add-mobile"></a></li>
           <li><a href="" id="notification-mobile" ></a></li>
-          
         </ul>
       </div>
     </div>
@@ -307,12 +307,15 @@
               <input name="file" type="file" multiple />
             </div>
             <div class="dropzone-previews">
-              <div class=""><span>Drop yuor photos or videos here</span></div>
+              <div class="dz-default dz-message"><span>Drop yuor photos or videos here</span></div>
             </div>
           </form>
-          <form id="post-description" class="hide">
+          <form id="post-description" class="hide" action="createPost">
             <label for="post-description-input">Enter a description:</label>
-            <textarea class="form-control" rows="5" id="post-description-input"> </textarea>
+            <textarea class="form-control" rows="5" id="post-description-input" name="postDescription"> </textarea>
+            <button type="submit" class="btn btn-success btn-create">
+              <i class="fa fa-paper-plane" aria-hidden="true"></i> Confirm
+            </button>
           </form>
 
 
