@@ -30,24 +30,38 @@
 <body>
   <header>
     <div id="rainbow-progress-bar"></div>
-    <nav class="transparent">
+    <div id="navbar-mobile">
+      <div class="search-bar">
+        <input type="text" class="form-control transparent" placeholder="Search" id="search-input">
+      </div>
+      <div class="bottom-nav-menu">
+        <ul id="horizontal-list">
+          <li><a href="index.html" id="home-mobile"></a></li>
+          <li><a href="profile.html" role="button" id="profile-mobile"></a></li>
+          <li><a href="" id="add-mobile" ><span /></a></li>
+          <li><a href="" id="notification-mobile" ></a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <nav id="navbar" class="transparent">
       <span class="nav-left">
-          <a href="index.html">
-            <span id="logo"></span>
-      <span id="logo-text">linstagram</span>
-      </a>
+        <a href="index.html"> 
+          <span class="logo"></span>
+          <span class="logo-text">linstagram</span>
+        </a>
       </span>
       <span id="search-form" class="form-inline">
-          <div class="input-group" id="search-div">
-            <span class="input-group-btn"><i class="fa fa-search"></i></span>
-      <input type="text" class="form-control transparent" placeholder="Search" id="search-input">
-      </div>
+        <div class="input-group" id="search-div">
+          <span class="input-group-btn"><i class="fa fa-search"></i></span>
+          <input type="text" class="form-control transparent" placeholder="Search" id="search-input">
+        </div>
       </span>
       <span class="nav-right">
-          <a href="" id="explore" class="right-icon-nav disabled" data-toggle="tooltip" data-placement="left" data-original-title="Coming Soon"></a>
-          <a href="" id="notification" class="right-icon-nav"></a>
-          <a href="#" role="button" id="profile" class="right-icon-nav"></a>
-        </span>
+        <a href="" id="explore" class="right-icon-nav disabled" data-toggle="tooltip" data-placement="left" data-original-title="Coming Soon"></a>
+        <a href="" id="notification" class="right-icon-nav"></a>
+        <a href="#" role="button" id="profile" class="right-icon-nav"></a>
+      </span>
     </nav>
   </header>
 
@@ -70,8 +84,8 @@
             <div class='card'>
               <div class='top-section'>
                 <a href=''>
-                    <img class="user-img" src='https://scontent-mxp1-1.cdninstagram.com/t51.2885-19/s320x320/20482280_307729109689765_5209255955170066432_a.jpg'>
-                  </a>
+                  <img class="user-img" src='https://scontent-mxp1-1.cdninstagram.com/t51.2885-19/s320x320/20482280_307729109689765_5209255955170066432_a.jpg'>
+                </a>
                 <a href='' class='user-name'>Lorenzo</a>
               </div>
               <div class='body-section'>
@@ -134,8 +148,8 @@
             <div class='card'>
               <div class='top-section'>
                 <a href=''>
-                    <img class="user-img" src='http://static.sify.com/cms/image/mdxq4Aigdfhsi.jpg'>
-                  </a>
+                  <img class="user-img" src='http://static.sify.com/cms/image/mdxq4Aigdfhsi.jpg'>
+                </a>
                 <a href='' class='user-name'>Peppa</a>
               </div>
               <div class='body-section'>
@@ -198,8 +212,8 @@
             <div class='card'>
               <div class='top-section'>
                 <a href=''>
-                    <img class="user-img" src='user_login_img.png'>
-                  </a>
+                  <img class="user-img" src='user_login_img.png'>
+                </a>
                 <a href='' class='user-name'>Peppe</a>
               </div>
               <div class='body-section'>
@@ -262,8 +276,8 @@
 
       <div class="nd2 nds" data-toggle="tooltip" data-placement="left" data-original-title="Post ">
         <a id="open-create-post-modal" href="#create-post-modal">
-            <i class="fa fa-picture-o center-icon" aria-hidden="true"></i>
-          </a>
+          <i class="fa fa-picture-o center-icon" aria-hidden="true"></i>
+        </a>
       </div>
 
       <div class="nd3 nds transparent" data-toggle="tooltip" data-placement="left" data-original-title="Top">
@@ -298,8 +312,7 @@
           </form>
           <form id="post-description" class="hide">
             <label for="post-description-input">Enter a description:</label>
-            <textarea class="form-control" rows="5" id="post-description-input"> 
-              </textarea>
+            <textarea class="form-control" rows="5" id="post-description-input"> </textarea>
           </form>
 
 

@@ -42,6 +42,15 @@ header {
   margin-bottom: 50px;
 }
 
+#navbar{
+  display: flex;
+}
+
+#navbar-mobile{
+  display: none;
+}
+
+
 .transparent {
   background: #fafafa !important;
 }
@@ -90,7 +99,7 @@ header {
 
 
 
-#logo-text {
+.logo-text {
   float: left;
   display: block;
   padding-left: 4px;
@@ -104,7 +113,7 @@ header {
 
 }
 
-#logo {
+.logo {
   float: left;
   position: relative;
   bottom: 15px;
@@ -117,7 +126,7 @@ header {
 
 }
 
-#profile {
+#profile{
   top: 5px;
   background-position: -370px -346px;
 }
@@ -169,4 +178,104 @@ header {
   0% { background-position: 0% 100%; }
   50% { background-position: 100% 200%; }
   100% {background-position: 0% 100%; }
+}
+
+@media (max-width: 1024px) {
+  #navbar{
+    display: none;
+  }
+  #navbar-mobile{
+    display: flex;
+  }
+
+  header {
+    margin-bottom: 0px;
+  }
+
+  .navbar{
+    margin-bottom: 0px !important;
+  }
+
+}
+
+#navbar-mobile .search-bar{
+  width: 100%;
+  margin: 16px;
+}
+
+
+#navbar-mobile .bottom-nav-menu {
+ position: fixed;
+ bottom: 0px;
+ width: 100%;
+ display: block;
+ background: white;
+ min-height: 35px;
+ z-index: 99999999;
+ box-shadow: 1px -4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+ul#horizontal-list {
+  min-width: 696px;
+  list-style: none;
+  padding-top: 5px;
+}
+
+ul#horizontal-list li {
+  position: relative;
+  right: 28px;
+  display: inline;
+  padding: 0 15px;
+}
+
+#profile-mobile{
+ background-image: url(icons.png);
+ background-repeat: no-repeat;
+ position: relative;
+ margin: 0 10px 0 20px;
+ transform: scale(1);
+ height: 24px;
+ width: 24px;
+ top: 7px;
+ background-position: -373px -353px;
+}
+
+#notification-mobile {
+ background-image: url(icons.png);
+ background-repeat: no-repeat;
+ position: relative;
+ margin: 0 10px 0 20px;
+ transform: scale(1);
+ height: 24px;
+ width: 24px;
+ top: 7px;
+ background-position: -407px 1px;
+}
+
+
+#add-mobile {
+ background-image: url(icons.png);
+ background-repeat: no-repeat;
+ position: relative;
+ margin: 0 10px 0 20px;
+ transform: scale(1);
+ height: 25px;
+ width: 25px;
+ top: 7px;
+ background-position: -407px -104px;
+}
+
+
+
+#home-mobile {
+ background-image: url(icons.png);
+ background-repeat: no-repeat;
+ position: relative;
+ margin: 0 10px 0 20px;
+ transform: scale(1);
+ height: 24px;
+ width: 24px;
+ top: 7px;
+ background-position: -407px -261px;
+ 
 }
